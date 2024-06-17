@@ -1,0 +1,87 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+    overflow: hidden;
+}
+
+#particle-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #ff6f61;
+    margin-bottom: 20px;
+}
+
+.message {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeIn 3s;
+}
+
+.heart-button {
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.heart-button:hover {
+    transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+}
+
+.heart-button:hover {
+    animation: heartbeat 1s infinite;
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: .15em solid #ff6f61;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ff6f61; }
+}
