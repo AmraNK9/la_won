@@ -39,6 +39,52 @@ h1 {
     animation: fadeIn 3s;
 }
 
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.images img {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.images img:hover {
+    transform: scale(1.1);
+}
+
+.shapes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.heart-shape, .circle-shape, .star-shape {
+    width: 50px;
+    height: 50px;
+}
+
+.heart-shape {
+    background: red;
+    clip-path: polygon(50% 0%, 61% 21%, 98% 35%, 75% 68%, 79% 100%, 50% 86%, 21% 100%, 25% 68%, 2% 35%, 39% 21%);
+}
+
+.circle-shape {
+    background: blue;
+    border-radius: 50%;
+}
+
+.star-shape {
+    background: yellow;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
 .heart-button {
     background: none;
     border: none;
@@ -84,4 +130,21 @@ h1 {
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: #ff6f61; }
+}
+
+.hidden {
+    display: none;
+}
+
+#love-message {
+    font-size: 2.5em;
+    color: #ff6f61;
+    margin-top: 20px;
+    animation: fadeInAndOut 4s ease-in-out;
+}
+
+@keyframes fadeInAndOut {
+    0% { opacity: 0; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(0.8); }
 }

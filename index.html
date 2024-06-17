@@ -9,12 +9,26 @@
 <body>
     <div id="particle-js">
         <div class="container">
-            <h1 class="typewriter">To the Love of My Life</h1>
+            <h1 class="typewriter">To -> La Won Ka Byar</h1>
             <p class="message">Every moment with you is a treasure. I love you more than words can express.</p>
-            <button class="heart-button">❤️</button>
+            <button class="heart-button" onclick="showLoveMessage()">❤️</button>
         </div>
+    <!-- <div id="love-message" class="hidden">I Love You</div> -->
+
     </div>
-   
+
+   <script>
+    function showLoveMessage() {
+    const loveMessage = document.getElementById('love-message');
+    loveMessage.classList.remove('hidden');
+    setTimeout(() => {
+        loveMessage.classList.add('hidden');
+    }, 4000);
+}
+
+
+
+   </script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script src="script.js"></script>
 </body>
