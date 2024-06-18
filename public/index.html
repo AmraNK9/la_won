@@ -27,12 +27,14 @@
             </div>
         </div>
         <div id="right-chat">
-
+            <div class="message float-up">
+                Hello
+            </div>
         </div>
 
-        <div id="message-input-container">
+        <div id="message-input-container" onchange="">
             <input type="text" id="message-input" name="message">
-            <button>Sent</button>
+            <button id="sent-btn">Sent</button>
         </div>
     </div>
    
@@ -42,7 +44,8 @@
 
 
 <script type="module" src="js/fcm.js"></script>
-
+    <script type="module" src="js/fcm.js"></script>
+    <script src="js/sent-message.js"></script>
     <script src="src/particles.js"></script>
     <script src="js/script.js"></script>
 </body>

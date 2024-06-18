@@ -22,7 +22,7 @@
     margin-bottom: 8%; */
     /* width: 230px;
     height:600px; */
-    animation: floatUp 5s infinite linear;
+    animation: floatUp 5s forwards linear;
   }
   
   @keyframes floatUp {
