@@ -4,7 +4,7 @@ const input = document.getElementById("message-input");
 const rightChat = document.getElementById("right-chat");
 const leftChat = document.getElementById("left-chat");
 const sentButton = document.getElementById("sent-btn");
-const socket = io('http://localhost:3001');
+const socket = io('https://256bf5c1a36a29ce5e83eccafa383cbe.serveo.net');
 const messagesDiv = document.getElementById('messages');
 const messageInput = document.getElementById('messageInput');
 
