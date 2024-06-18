@@ -1,4 +1,8 @@
 // ParticlesJS Configuration
+
+
+
+
 particlesJS('particle-js', {
     particles: {
       number: {
@@ -15,13 +19,13 @@ particlesJS('particle-js', {
         type: "circle",
         stroke: {
           width: 0,
-          color: "#000000"
+          color: "#fffff"
         },
         polygon: {
           nb_sides: 5
         },
         image: {
-          src: "img/github.svg",
+          src: "icons/Love_Heart_SVG.svg",
           width: 100,
           height: 100
         }

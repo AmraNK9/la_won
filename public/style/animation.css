@@ -1,0 +1,78 @@
+
+.heart {
+	font-size: 150px;
+	color: #e00;
+	animation: beat .25s infinite alternate;
+	transform-origin: center;
+}
+
+/* Heart beat animation */
+@keyframes beat{
+	to { transform: scale(1.4); }
+}
+
+
+/*Float up animation*/
+
+
+.float-up{
+    /* position: relative; */
+    /* margin: auto;
+    display: block;
+    margin-bottom: 8%; */
+    /* width: 230px;
+    height:600px; */
+    animation: floatUp 5s infinite linear;
+  }
+  
+  @keyframes floatUp {
+    0% {
+      transform: translateY(100vh);
+	  opacity: 1;
+    }
+
+	50%{
+		opacity: 0;
+	}
+    
+    100% {
+      transform: translateY(-480px);
+	  opacity: 0;
+    }
+  }
+
+
+  /* Float animation */
+  
+.float {
+	width: 150px;
+	height: 150px;
+	box-sizing: border-box;
+	border: 5px rgba(255, 255, 255, 0.459) grey;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	img { width: 100%; height: auto; }
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+		
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.hidden{
+	opacity: 0;
+}

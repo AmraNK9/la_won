@@ -1,8 +1,15 @@
 /* just some  styling*/
+
+
 body { 
     text-align: center; 
-  
+    /* background-color: black; */
+
   }
+  html{
+    /* background-color: black; */
+  }
+  
   
   /* heart div class - in html i used just a simple html simbol entity for heart sign, you can use text or whatever u want*/
   
@@ -120,11 +127,78 @@ body {
 
    #menu{
     position: absolute;
-    width: 100px;
-    height: 50px;
+    width: 100;
+    height: 100px;
     right: 16px;
     top:16px;
     pointer-events: painted;
     /* background-color: aliceblue; */
     color: #e00;
    }
+
+   
+   .romance-background {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+    background: rgb(26, 188, 156);
+    background: -moz-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+    background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+  }
+  
+  #left-chat{
+    height: 100%;
+    width: 50%;
+    /* background-color: #e00;   */
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+
+  }
+
+  #right-chat{
+    height: 100%;
+    width: 50%;
+    /* background-color: #0000a0 ; */
+    position: absolute;
+    pointer-events: none;
+    right: 0;
+
+  }
+
+  .message{
+    background-color: rgb(148, 14, 175);
+    display: inline-block;
+
+    color: aliceblue;
+    /* width: 100; */
+    text-align: start;
+    
+    /* height: 40; */
+    /* margin: 16; */
+    padding: 16px;
+    /* height: 40px; */
+    border-radius: 20px;
+    /* box-shadow: 10px 10px 20px grey; */
+  }
+
+#message-input-container{
+    padding: 16px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    pointer-events: fill;
+  }
+
+  #message-input{
+
+    width: 80% ;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    height: 30px;
+  }
