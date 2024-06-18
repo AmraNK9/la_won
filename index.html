@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romantic Page for My Girlfriend</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href='style/style.css'>
 </head>
-<body>
-    
 
+<body>
+
+    <div class="floating-container">
+        <div id="main-article">
+            <img  src="img/moon_rotate.gif" alt="">
+        </div>
+        <div id="menu">
+            &hearts;
+        </div>
+    </div>
     <div id="particle-js">
 
-
-        
-
     </div>
+ 
+    <script>
+        function showLoveMessage() {
+            const loveMessage = document.getElementById('love-message');
+            loveMessage.classList.remove('hidden');
+            setTimeout(() => {
+                loveMessage.classList.add('hidden');
+            }, 4000);
+        }
 
-   <script>
-    function showLoveMessage() {
-    const loveMessage = document.getElementById('love-message');
-    loveMessage.classList.remove('hidden');
-    setTimeout(() => {
-        loveMessage.classList.add('hidden');
-    }, 4000);
-}
 
 
-
-   </script>
-    <script src="particles.js"></script>
-    <script src="script.js"></script>
+    </script>
+    <script src="src/particles.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
