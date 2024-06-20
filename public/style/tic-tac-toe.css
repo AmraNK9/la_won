@@ -1,0 +1,39 @@
+#game-board {
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 5px;
+    pointer-events: fill;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .cell:hover {
+    background-color: #ddd;
+  }
+  
+  #status {
+    margin-top: 20px;
+    color: #eeed;
+  }
+  
+  button {
+    margin-top: 20px;
+  }
+
+  
+  #reset-btn{
+    pointer-events: all;
+  }

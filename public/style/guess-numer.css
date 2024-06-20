@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+#guess {
+    margin-top: 20px;
+}
+
+#guess-game{
+    pointer-events: all;
+}

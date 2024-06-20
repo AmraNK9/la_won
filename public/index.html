@@ -5,53 +5,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romantic Page for My Girlfriend</title>
-    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
-
-
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"
+        integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO"
+        crossorigin="anonymous"></script>
     <script src="src/particles.js"></script>
     <link rel="stylesheet" href='style/style.css'>
     <link rel="stylesheet" href="style/animation.css">
+    <link rel="stylesheet" href="style/tic-tac-toe.css">
 </head>
 
 <body class="romance-background">
-
+    <!-- <div class="active-status">
+        <button id="copy-room">copy-room</button>
+    </div> -->
+    <div id="menu">
+        <button id="copy-room">Copy Room</button>
+        <!-- <button id="toggle-tic-tac-toe">Tic Tac Toe</button> -->
+        <!-- <button id="toggle-guess-game">Guess Game</button>
+        <button id="toggle-weather">Weather</button> -->
+    </div>
     <div class="floating-container">
         <div id="main-article">
-            <!-- <img  class="avatar" src="img/moon_rotate.gif" alt=""> -->
-            <img class="float" src="img/moon_rotate.gif" alt="">
+            <img class="float event" id="avatar" src="img/moon_rotate.gif" alt="">
+            <img class="heart event" id="heart-beat" src="img/heart.png" alt="">
 
-        </div>
-
-        <div id="menu">
-            <img src="img/heart.png" class="heart" width="20" height="20" alt="">
-        </div>
-        <div class="" id="left-chat">
-            <div class="message float-up">
-                Hello
+            
+            <div class="event" id="tic-tac-toe-game">
+                <div id="game-board">
+                    <div class="row">
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                    </div>
+                </div>
+                <div id="status"></div>
+                <button id="reset-btn">Reset Game</button>
+                <script type="module" src="js/tic-tac-toe.js"></script>
             </div>
+
+            <div id="guess-game" class="event">
+                <h1>Number Guessing Game</h1>
+                <p>Guess a number between 1 and 100</p>
+                <input type="number" id="guess-input" min="1" max="100">
+                <button id="guess-btn">Guess</button>
+                <p id="status"></p>
+                <button id="reset-btn">Reset Game</button>
+                <script src="js/guess-game.js"></script>
+            </div>
+
+            <div id="weather-screen" class="event">
+                <h1>Weather Information</h1>
+                <p>Weather details go here...</p>
+            </div>
+        </div>
+
+     
+
+        <div id="left-chat">
+            <div class="message float-up">Hello</div>
         </div>
         <div id="right-chat">
-            <div class="message float-up">
-                Hello
-            </div>
+            <div class="message float-up">Hello</div>
         </div>
 
-        <div id="message-input-container" onchange="">
+        <div id="message-input-container">
             <input type="text" id="message-input" name="message">
-            <button id="sent-btn">Sent</button>
+            <img id="sent-btn" height="30" src="img/send-icon.png" alt="">
         </div>
     </div>
 
-    <div id="particle-js">
-
-    </div>
-
+    <div id="particle-js"></div>
 
     <script type="module" src="js/fcm.js"></script>
-
-    <script type="module" src="js/fcm.js"></script>
-    <!-- <script src="js/sent-message.js"></script> -->
     <script src="js/script.js"></script>
+    <script type="module" src="js/utility.js"></script>
+
+    <script type="module" src="js/menu.js"></script>
 </body>
 
 </html>
